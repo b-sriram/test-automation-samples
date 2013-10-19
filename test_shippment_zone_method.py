@@ -9,7 +9,7 @@ def test_shipment_zone_method(browser, url, username, password):
 	go_to_admin(browser, url, username, password)
 	setup_store_location(browser, country, state, postcode)
 
-	#Adding new shipping zone
+	#Adding new shipping zone in admin panel
 	browser.find_element_by_id('tab1').click()
 	browser.find_element_by_xpath('//input[@value = "Add a Shipping Zone..."]').click()
 	browser.find_element_by_xpath('//input[@id = "zonename"]').send_keys(zonename)

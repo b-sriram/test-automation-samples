@@ -9,7 +9,7 @@ product_video_label="video-9yHl24QynOM"
 def test_add_product_checkout_as_guest(browser, url, username, password):
 	go_to_admin(browser,url,username,password)
 
-	#Adding a product 
+	#Adding a product in admin panel
 	browser.find_element_by_link_text('Products').click()
 	browser.find_element_by_link_text('Add a Product').click()
 	#Entering Details of the product
