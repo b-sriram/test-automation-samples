@@ -2,8 +2,8 @@ from lib.ui_lib import *
 category_name="Fruits"
 SKU = "T001"
 product_img_path="/home/sravan/Desktop/download.jpg"
+product_video_url="http://www.youtube.com/watch?v=RY09M9wg1is"
 product_video_label="video-9yHl24QynOM"
-
 
 
 def test_add_product_checkout_as_guest(browser, url, username, password):
@@ -33,7 +33,7 @@ def test_add_product_checkout_as_guest(browser, url, username, password):
 	file = browser.find_element_by_xpath('//input[@class = "file-upload"]')
 	file.send_keys(product_img_path)
 	time.sleep(10)
-	browser.find_element_by_id('product-videos-search-query').send_keys(" http://www.youtube.com/watch?v=RY09M9wg1is")
+	browser.find_element_by_id('product-videos-search-query').send_keys(product_video_url)
 	element=wait_until_element_present(browser,'product-videos-search','ID')
 	element.click()
 	browser.find_element_by_xpath('//label[@for = "'+product_video_label+'"]').click()
@@ -58,7 +58,7 @@ def test_add_product_checkout_as_guest(browser, url, username, password):
 	browser.find_element_by_xpath('//button[@class = "btn btn-secondary filter-button"]').click()
 	time.sleep(5)
 	browser.find_element_by_xpath('//button[@type = "button"]/span[text()="Options"]').click()
-	browser.find_element_by_link_text('View').click()s
+	browser.find_element_by_link_text('View').click()
  
     #Switching to cart window 
 	for handle in browser.window_handles:
