@@ -21,6 +21,7 @@ def test_SHIPPING_setup_zone_method(browser, url, username, password):
 		browser.find_element_by_xpath('//input[@value = "Add a Shipping Zone..."]').click()
 		browser.find_element_by_xpath('//input[@id = "zonename"]').send_keys(zonename)
 		browser.find_element_by_xpath('//label[@for = "zonetype_country"]').click()
+		time.sleep(3)
 		browser.find_element_by_xpath('//label[@for = "ISSelectzonetype_country_list_13_input"]').click()
 		browser.find_element_by_xpath('//label[@for = "ISSelectzonetype_country_list_99_input"]').click()
 		browser.find_element_by_name('SubmitButton1').click()
@@ -37,7 +38,7 @@ def test_SHIPPING_setup_zone_method(browser, url, username, password):
 	# Other exceptions
 	except Exception:
 		browser.save_screenshot('other_exception.png')
-	raise
+	        raise
 
 	# Verify successfull submission of shipping zone details
 	verify_and_assert_success_message(browser, "The shipping zone has been created successfully.", ".alert-success")
@@ -45,6 +46,7 @@ def test_SHIPPING_setup_zone_method(browser, url, username, password):
 	# Setup  new shipping method for created shipping zone 
 	try:
 		browser.find_element_by_xpath('//input[@value="Add a Shipping Method..."]').click()
+		time.sleep(5)
 		browser.find_element_by_xpath('//span[text()="Australia Post"]').click()
 	
 	except NoSuchElementException:
@@ -52,7 +54,7 @@ def test_SHIPPING_setup_zone_method(browser, url, username, password):
 		raise
 
 	#Select all Australia Post Settings	
-	element = wait_until_element_present(browser, 'Select All', 'LINK')
+	element = wait_until_element_present(browser,'Select All','LINK')
 	element.click()
 
 	try:
