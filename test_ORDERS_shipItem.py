@@ -73,7 +73,5 @@ shipping_module='Australia Post'
 shipmethod_desc='My ship desc'
 shiptrack_no='8768790'
 ship_comments='Ship these items'
-<<<<<<< HEAD
 success_msg='orders matched your search criteria and are shown below.'
-=======
->>>>>>> 9ec85724b53e744526104fc6346c2a7d73d7602b
+
