@@ -1,6 +1,8 @@
 from lib.ui_lib import *
 from selenium.webdriver.support.ui import WebDriverWait
 
+#----------------------Work in progress
+
 #*********************************************************************************
 # Description: Verify Shipping item option from View Orders table
 # Select order menu -> view orders -> select ship item of an order 
@@ -71,4 +73,7 @@ shipping_module='Australia Post'
 shipmethod_desc='My ship desc'
 shiptrack_no='8768790'
 ship_comments='Ship these items'
+<<<<<<< HEAD
 success_msg='orders matched your search criteria and are shown below.'
+=======
+>>>>>>> 9ec85724b53e744526104fc6346c2a7d73d7602b

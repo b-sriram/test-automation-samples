@@ -1,4 +1,6 @@
-from lib.ui_lib import *
+from mylib_lib import *
+
+# -------------------- Work in Progress
 
 #*********************************************************************************
 # Description: Verify "Edit an Order" functionality in control panel
@@ -6,7 +8,7 @@ from lib.ui_lib import *
 #*********************************************************************************
 
 def test_ORDERS_editOrder(browser, url, username, password):
-	""" Verify 'Edit an Order' functionality in control panel"""
+	""" Verify "Edit an Order" functionality in control panel"""
 	
 	# Initialise browser and pass credentials
 	go_to_admin(browser, url, username, password)
@@ -21,7 +23,7 @@ def test_ORDERS_editOrder(browser, url, username, password):
 		# Select specific order to edit by providing orderID
 		browser.find_element_by_xpath("//tr[contains(., '" + orderID + "')]").find_element_by_css_selector('.dropdown-trigger').click()
 		
-		# Edit order by clearing the fileds and entering the respective values
+		# Edit order by clearing the fields and entering the respective values
 		browser.find_element_by_link_text('Edit Order').click()
 		browser.find_element_by_id('FormField_4').clear()
 		browser.find_element_by_id('FormField_4').send_keys(FirstName)
@@ -61,7 +63,7 @@ def test_ORDERS_editOrder(browser, url, username, password):
 	
 
 	try:
-		# Quantity filed validation Pop-up handler
+		# Quantity fields validation Pop-up handler
 		element = browser.find_element_by_xpath('//button[text() = "Ok"]')
 		element.click()
 	except NoSuchElementException:
@@ -111,4 +113,4 @@ postcode='500054'
 Search='Blue ear rings'
 qty='3'
 order_success_msg="has been updated successfully."
-orderID='109'
+orderID='102'
