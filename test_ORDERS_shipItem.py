@@ -1,7 +1,6 @@
 from lib.ui_lib import *
 from selenium.webdriver.support.ui import WebDriverWait
 
-#----------------------Work in progress
 
 #*********************************************************************************
 # Description: Verify Shipping item option from View Orders table
