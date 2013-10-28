@@ -1,6 +1,5 @@
 from lib.ui_lib import *
 
-# -------------------- Work in Progress
 
 #*********************************************************************************
 # Description: Verify and Assert "Edit an Order" functionality in control panel
